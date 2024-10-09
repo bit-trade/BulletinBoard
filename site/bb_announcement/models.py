@@ -1,3 +1,26 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-# Create your models here.
+
+class AnnounceCat(models.Model):
+    title = models.CharField(max_length=40, unique=True)
+    description = models.TextField(max_length=500, blank=True)
+
+
+class Announcement(models.Model):
+    title = models.CharField(max_length=250)
+    text = models.TextField()
+    data_creation = models.DateTimeField(auto_now_add=True)
+    data_last_updated = models.DateTimeField(auto_now=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='announce_user_feedback')
+
+
+class ReplyAnnounce(models.Model):
+    text = models.TextField(max_length=500)
+    data_creation = models.DateTimeField(auto_now_add=True)
+    data_last_updated = models.DateTimeField(auto_now=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reply_user_feedback')
+    announce = models.ForeignKey(Announcement, on_delete=models.RESTRICT, related_name='reply_announce_feedback')
+
+    def __str__(self):
+        return f'отклик на дату - {self.data_creation}'

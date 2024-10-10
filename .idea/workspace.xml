@@ -21,9 +21,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "tinymce",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -45,6 +45,7 @@
       <updated>1728549812032</updated>
       <workItem from="1728549813686" duration="57000" />
       <workItem from="1728551396069" duration="76000" />
+      <workItem from="1728552280977" duration="38000" />
     </task>
     <servers />
   </component>

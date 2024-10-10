@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41b943c7-895f-40af-8d73-82fc8345da1c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/BulletinBoard.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/bb_announcement/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/bb_announcement/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/bb_announcement/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/bb_announcement/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/bb_announcement/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/bb_announcement/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/bb_announcement/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/bulletin_board/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/bulletin_board/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/bulletin_board/secret.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/bulletin_board/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/bulletin_board/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/bulletin_board/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/manage.py" beforeDir="false" />
-    </list>
+    <list default="true" id="41b943c7-895f-40af-8d73-82fc8345da1c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,9 +10,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2nEswns35rmpwqHDmc5f1tzKC5E" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -38,8 +21,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "ckeditor",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -60,6 +44,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728549812032</updated>
       <workItem from="1728549813686" duration="57000" />
+      <workItem from="1728550366042" duration="158000" />
     </task>
     <servers />
   </component>

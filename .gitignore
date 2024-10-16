@@ -1,1 +1,3 @@
-site/bulletin_board/.env
+.idea/
+website/bulletin_board/.env
+requirements-*

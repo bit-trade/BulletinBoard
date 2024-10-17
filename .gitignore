@@ -1,5 +1,6 @@
-/.idea/
-/TEMP/
+.idea/
+TEMP/
+__pycache__/
 website/bulletin_board/.env
 requirements-*
-*.pyc
+*.py[cod]

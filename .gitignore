@@ -1,5 +1,5 @@
 .idea/
+TEMP/
 website/bulletin_board/.env
 requirements-*
-TEMP/
 *.pyc

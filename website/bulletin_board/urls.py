@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from bb_announce.views import AnnouncementList
 
 urlpatterns = [
+    path('', AnnouncementList.as_view(), name='home'),
     path('admin/', admin.site.urls),
     path('tinymce/', include('tinymce.urls')),
 ]

@@ -3,9 +3,7 @@
 <head>
     {% load static %}
     <title>
-        {% block title %}
-        Доска объявлений
-        {% endblock title %}
+        Доска объявлений |&nbsp{% block title %}{% endblock title %}
     </title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css"/>
@@ -20,18 +18,17 @@
             <!-- End Slider -->
             <div class="menu_nav">
                 <ul>
-                    <li class="active"><a href="index.html"><span>Home Page</span></a></li>
-                    <li><a href="support.html"><span>Support</span></a></li>
-                    <li><a href="about.html"><span>About Us</span></a></li>
-                    <li><a href="blog.html"><span>Blog</span></a></li>
-                    <li><a href="contact.html"><span>Contact Us</span></a></li>
+                    <li class="active"><a href="{% url 'home' %}"><span>Home Page</span></a></li>
+                    <li><a href="{% url 'home' %}"><span>Support</span></a></li>
+                    <li><a href="{% url 'home' %}"><span>About Us</span></a></li>
+                    <li><a href="{% url 'home' %}"><span>Blog</span></a></li>
+                    <li><a href="{% url 'home' %}"><span>Contact Us</span></a></li>
                 </ul>
             </div>
             <!--Begin Header -->
             <div class="logo">
-                {% block header %}
-                <h1><a href="#"><span>Доска объявлений</span> <small>Company Slogan Here</small></a></h1>
-                {% endblock header %}
+                <h1><a href="{% url 'home' %}"><span>Доска объявлений</span>
+                    <small>{% block header %}Company Slogan Here{% endblock header %}</small></a></h1>
             </div>
             <!--End Header -->
             <div class="clr"></div>
@@ -41,12 +38,8 @@
         <div class="content_resize">
             <div class="mainbar">
                 <!-- Begin Content -->
-                <div class="article">
                     {% block content %}{% endblock content %}
-                </div>
                 <!-- End Content -->
-                {# Пагинация #}
-                <p class="pages"><small>Page 1 of 2</small> <span>1</span> <a href="#">2</a> <a href="#">&raquo;</a></p>
             </div>
             <div class="sidebar">
                 <div class="searchform">

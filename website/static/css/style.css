@@ -185,7 +185,7 @@ h1 small {
 }
 .content .mainbar .post_content {
 	float:right;
-	width:450px;
+	/*width:450px;*/
 }
 .content .mainbar .post_content strong {
 	color:#585757;

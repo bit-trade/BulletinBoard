@@ -14,7 +14,9 @@
     <div class="clr"></div>
     <p>Posted by <a href="#">{{ advert.user.username }}</a> <span>&nbsp;&bull;&nbsp;</span> Filed under <a href="#">{{ advert.announce_cat.title }}</a></p>
     {{ advert.content }}
-    <p>{{ advert.data_creation|date:'d M Y' }} <span>&nbsp;&bull;&nbsp;</span><a href="#"><strong>Edit</strong></a> <span>&nbsp;&bull;&nbsp;</span></p>
+    <p>{{ advert.data_creation|date:'d M Y' }} <span>&nbsp;&bull;&nbsp;</span>
+        <a href="{% url 'advert_edit' advert.id %}"><strong>Edit</strong></a> <span>&nbsp;&bull;&nbsp;</span>
+        <a href="{% url 'advert_delete' advert.id %}"><strong>Delete</strong></a> <span>&nbsp;&bull;&nbsp;</span></p>
 </div>
 <div class="article">
     {% if advert.Reply_Announce_feedback.all %}
@@ -29,35 +31,7 @@
     <h2>Нет откликов</h2>
     {% endif %}
 </div>
-<div class="article">
-    <h2><span>Leave a</span> Reply</h2>
-    <div class="clr"></div>
-    <form action="#" method="post" id="leavereply">
-        <ol>
-            <li>
-                <label for="name">Name (required)</label>
-                <input id="name" name="name" class="text"/>
-            </li>
-            <li>
-                <label for="email">Email Address (required)</label>
-                <input id="email" name="email" class="text"/>
-            </li>
-            <li>
-                <label for="website">Website</label>
-                <input id="website" name="website" class="text"/>
-            </li>
-            <li>
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" rows="8" cols="50"></textarea>
-            </li>
-            <li>
-                <input type="image" name="imageField" id="imageField" src="images/submit.gif" class="send"/>
-                <div class="clr"></div>
-            </li>
-        </ol>
-    </form>
-</div>
 {% endblock content %}
 
-{% block footer %}
-{% endblock footer %}
+{#{% block footer %}#}
+{#{% endblock footer %}#}

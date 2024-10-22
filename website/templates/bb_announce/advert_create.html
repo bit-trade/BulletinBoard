@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+
+{% block title %}
+Создать объявление
+{% endblock title %}
+
+{% block header %}
+Создать объявление
+{% endblock header %}
+
+{% block content %}
+<div class="article">
+    <h2>Создать объявление</h2>
+    <div class="clr"></div>
+    <form action="" method="post" id="leavereply">
+        <ol>
+            <li>
+                {% csrf_token %}
+                {{ form.as_p }}
+            </li>
+            <li>
+                <input type="submit" name="imageField" id="imageField" src="static/images/submit.gif" class="send" value="Save"/>
+                <div class="clr"></div>
+            </li>
+        </ol>
+    </form>
+</div>
+{% endblock content %}
+
+{#{% block footer %}#}
+{#{% endblock footer %}#}

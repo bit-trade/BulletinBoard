@@ -21,7 +21,7 @@ Home page
     <div class="clr"></div>
     <div class="post_content">
         {{ advert.content|truncatewords:20 }}
-        <p class="spec"><a href="announcement/{{ advert.id }}" class="rm">Read more</a></p>
+        <p class="spec"><a href="{% url 'advert_detail' advert.id %}" class="rm">Read more</a></p>
     </div>
     <div class="clr"></div>
 </div>
@@ -56,5 +56,5 @@ Home page
 {% endif %}
 {% endblock content %}
 
-{% block footer %}
-{% endblock footer %}
+{#{% block footer %}#}
+{#{% endblock footer %}#}

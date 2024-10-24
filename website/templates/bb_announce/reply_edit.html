@@ -1,22 +1,25 @@
 {% extends 'index.html' %}
 
 {% block title %}
-Удалить объявление
+Редактировать отклик
 {% endblock title %}
 
 {% block header %}
-Удалить объявление
+Редактировать отклик
 {% endblock header %}
 
 {% block content %}
 <div class="article">
-    <h2>Удалить объявление: "{{ object.title }}"</h2>
+    <h2>Редактировать отклик</h2>
     <div class="clr"></div>
     <form action="" method="post" id="leavereply">
         <ol>
             <li>
                 {% csrf_token %}
-                <input type="submit" name="imageField" id="imageField" src="static/images/submit.gif" class="send" value="Delete"/>
+                {{ form.as_p }}
+            </li>
+            <li>
+                <input type="submit" name="imageField" id="imageField" src="static/images/submit.gif" class="send" value="Submit"/>
                 <div class="clr"></div>
             </li>
         </ol>

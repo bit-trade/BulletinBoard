@@ -16,17 +16,21 @@
     {{ advert.content }}
     <p>{{ advert.data_creation|date:'d M Y' }} <span>&nbsp;&bull;&nbsp;</span>
         <a href="{% url 'advert_edit' advert.id %}"><strong>Edit</strong></a> <span>&nbsp;&bull;&nbsp;</span>
-        <a href="{% url 'advert_delete' advert.id %}"><strong>Delete</strong></a> <span>&nbsp;&bull;&nbsp;</span></p>
+        <a href="{% url 'advert_delete' advert.id %}"><strong>Delete</strong></a> <span>&nbsp;&bull;&nbsp;</span>
+        <a href="{% url 'reply_create' advert.id %}"><strong>Write reply</strong></a></p>
 </div>
 <div class="article">
     {% if advert.Reply_Announce_feedback.all %}
     <h2><span>{{ advert.Reply_Announce_feedback.all.count }}</span> Reply</h2>
     <div class="clr"></div>
-    <div class="comment"><a href="#"><img src="static/images/userpic.gif" width="40" height="40" alt="" class="userpic"/></a>
-        <p><a href="#">admin</a> Says:<br/>
-            April 20th, 2009 at 2:17 pm</p>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.</p>
+    {% for reply in advert.Reply_Announce_feedback.all %}
+    <div class="comment"><a href="#"><img src="/static/images/userpic.gif" width="40" height="40" alt="" class="userpic"/></a>
+        <p><a href="#">{{ reply.user.username }}</a> Says:<br/>{{ reply.data_creation }}</p>
+        <p>{{ reply.text }}</p>
+        <p><a href="{% url 'reply_edit' reply.id %}"><strong>Edit</strong></a> <span>&nbsp;&bull;&nbsp;</span>
+        <a href="{% url 'reply_delete' reply.id %}"><strong>Delete</strong></a></p>
     </div>
+    {% endfor %}
     {% else %}
     <h2>Нет откликов</h2>
     {% endif %}

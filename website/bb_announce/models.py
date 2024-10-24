@@ -51,3 +51,6 @@ class ReplyAnnounce(models.Model):
     def __str__(self):
         return f'откликнулись - {self.data_creation}'
 
+    def get_absolute_url(self):
+        return reverse('advert_detail', args=[str(self.announce.id)])
+
